@@ -21,6 +21,12 @@ While it's minimalist and old, MIDI is still the best option we have for control
 - Automation curve values.
 - Detailed transport and time signature.
 
+A [demo app](https://github.com/jbat100/sonosthesia-unity-demo-live) is available and will be updated regularly
+
+<p align="center">
+    <img alt="Keyboard Builder" src="https://github.com/jbat100/sonosthesia-unity-demo-live/assets/1318918/7afd6093-199b-4bc8-8d21-d31f93ef32cf" width="75%">
+</p>
+
 ### Performance environment design
 
 Building on the environment design tools knowledge acquired while working on [Minsar](https://www.opuscope.com/minsar/overview), Sonosthesia aims to provide useful generation tools for instruments such as keyboards, harps, xylophone, drum sets as well as more exotic forms afforded by the dematerialized nature of XR environments. These generation tools focus on:
@@ -29,6 +35,14 @@ Building on the environment design tools knowledge acquired while working on [Mi
 - Spatial and musical configurability (scale, sensitivity etc...).
 - Real time channel and per note musical expression using mappings.
 - Affordances providing real time visual and haptic feedback to increase presence.
+
+<p align="center">
+    <img alt="Keyboard Builder" src="https://github.com/jbat100/sonosthesia-unity-demo-instrument/assets/1318918/2a9622b9-c820-4f28-991e-22df35698778" width="75%"><
+</p>
+
+<p align="center">
+    <img alt="Keyboard Builder" src="https://github.com/jbat100/sonosthesia-unity-demo-instrument/assets/1318918/3e62e079-c46d-4778-802b-14ba055adcef" width="75%">
+</p>
 
 ### Tools for creating immersive audio visual art
 
@@ -41,6 +55,14 @@ Pushing the limits of procedural graphics within the constraints imposed by the 
 - ECS based animations drivers.
 
 A Unity [demo app](https://github.com/jbat100/sonosthesia-unity-demo-deform) demonstrates some of the techniques with results compiled in a YouTube [playlist](https://www.youtube.com/playlist?list=PL8HqVGO27FJP4i2wh5F9h6oP8IscdKsg2).
+
+<p align="center">
+  <img src="https://github.com/jbat100/sonosthesia-unity-demo-deform/assets/1318918/9b2b6682-0e67-40b4-96fa-c3d0d54e1dbf" />
+</p>
+
+<p align="center">
+  <img src="https://github.com/jbat100/sonosthesia-unity-demo-deform/assets/1318918/66ef7806-3d56-47c0-ba0f-db4ba7997a73" />
+</p>
 
 ## Planned evolutions
 
