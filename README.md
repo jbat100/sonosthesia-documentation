@@ -57,6 +57,14 @@ Pushing the limits of procedural graphics within the constraints imposed by the 
 A Unity [demo app](https://github.com/jbat100/sonosthesia-unity-demo-deform) demonstrates some of the techniques with results compiled in a YouTube [playlist](https://www.youtube.com/playlist?list=PL8HqVGO27FJP4i2wh5F9h6oP8IscdKsg2).
 
 <p align="center">
+  <img src="https://github.com/jbat100/sonosthesia-documentation/assets/1318918/34a5bd09-a028-4ff7-ac81-ba9cd99f952f" />
+</p>
+
+<p align="center">
+  <img src="https://github.com/jbat100/sonosthesia-documentation/assets/1318918/8df2eefa-ad37-49bd-b48c-a6cf816dc609" />
+</p>
+
+<p align="center">
   <img src="https://github.com/jbat100/sonosthesia-unity-demo-deform/assets/1318918/9b2b6682-0e67-40b4-96fa-c3d0d54e1dbf" />
 </p>
 
