@@ -2,14 +2,25 @@
 
 This is the landing page for the Sonosthesia project. It gives a high level overview of the different components and planned evolutions. It is founded and principally driven by [Jonathan Thorpe](https://www.linkedin.com/in/jonathan-thorpe-811b845b/) inspired by an old vision of XR as an artistic audio/visual performance environment, the first draft of which dates back to [2013](https://github.com/jbat100/sonosthesia-website/blob/master/documents/VSC2013.pdf). After a long pause while working fulltime as software architect for no code XR creation tool [Minsar](https://www.opuscope.com/minsar/overview) and sadly seeing die due to lack of funds the time has come for a second draft with many lessons learned. Chief amongst these is the need to integrate within existing tech stacks rather than trying to replace them. 
 
+## Summary
+
+- A set of modular and reusable [Unity packages](https://github.com/jbat100/sonosthesia-unity-packages) covering a broad range of use cases related to audio visual interactive immersive art. These include data flow and processing, audio analysis, networking, MIDI/MPE, object interaction and manipulation, procedural shaders, meshes and VFX, and more. 
+- A set of Unity demo applications which showcase package usage, some in tandem with running Ableton Live sessions. These include [MIDI/MPE connectivity](https://github.com/jbat100/sonosthesia-unity-demo-midi), [audio reactive procedural graphics](https://github.com/jbat100/sonosthesia-unity-demo-deform) and [musical performance with bi-lateral Live/Unity communication](https://github.com/jbat100/sonosthesia-unity-demo-live).
+- A [pipeline for extracting audio analysis](https://github.com/jbat100/sonosthesia-audio-pipeline) ahead of time for static audio assets, and playing them back in Unity. This allows performance gains which are particularly crucial in XR apps. 
+- A [node connector app](https://github.com/jbat100/sonosthesia-daw-connector) to ease bilateral communications with DAWs
+- Max 4 Live [devices](https://github.com/jbat100/sonosthesia-daw-connector/tree/main/m4l) aiming to provide detailed state information, sound descriptors and powerful remote control opportunities.
+
 ## Ongoing Projects
 
-Currently, active development is focused on:
+### Real time audio reactivity
 
-- A [node connector app](https://github.com/jbat100/sonosthesia-daw-connector) to ease bilateral communications with DAWs
-- Max 4 Live devices aiming to provide detailed state information, sound descriptors and powerful remote control opportunities.
-- A set of modular and reusable [Unity packages](https://github.com/jbat100/sonosthesia-unity-packages).
-- A set of Unity demo applications which showcase system usage, often in tandem with running Ableton Live sessions.
+Audio reactivity is a powerful mechanism which can bring life to a real time scene (XR or plain 3D), the core of the approach is to extract sound descriptors from sound in order to drive other aspects of the scene. These can be procedural graphics, shader or VFX parameters, procedural movement or physics, lighting or whatever the need might be. A number of different approaches are being investigated to ease this process:
+
+- Accessing audio data for [AudioSource](https://docs.unity3d.com/ScriptReference/AudioSource.html) or [AudioListener](https://docs.unity3d.com/ScriptReference/AudioListener.html) and extracting energy in [octave bands](https://en.wikipedia.org/wiki/Octave_band). See [com.sonosthesia.audio](https://github.com/jbat100/sonosthesia-unity-packages/tree/main/packages/com.sonosthesia.audio/Runtime). This can be used for [timeline audio tracks](https://docs.unity3d.com/Packages/com.unity.timeline@1.8/manual/tl-overview.html) playing through AudioSource components.
+- Extracting audio analysis ahead of time and saving on performance at runtime, using the [audio-pipeline](https://github.com/jbat100/sonosthesia-audio-pipeline) and playing them back on the unity timeline using custom [tracks and assets](https://blog.unity.com/engine-platform/extending-timeline-practical-guide).
+- In the context of live musical performance using external DAWs such as Live or Logic Pro, audio analysis is performed in plugins (currently only implemented in Max 4 Live) and relayed to clients (currently Unity) using the [node connector app](https://github.com/jbat100/sonosthesia-daw-connector). This allows graphics to in real time to ongoing musical performances.
+- (Planned) using core features of FMOD to run audio analysis on audio streams, allowing audio analysis to run on interactive audio which can be controlled by user interactions.
+- (Planned) plugin into host system music playing apps and system sound to allow reactive visuals to be driven by user content. The feasability of on the fly source seperation (to isolate different instruments) will be investigated.
 
 
 ### Briding the gap from Game Engines to DAWs
@@ -25,6 +36,10 @@ A [demo app](https://github.com/jbat100/sonosthesia-unity-demo-live) is availabl
 
 <p align="center">
     <img alt="Keyboard Builder" src="https://github.com/jbat100/sonosthesia-unity-demo-live/assets/1318918/7afd6093-199b-4bc8-8d21-d31f93ef32cf" width="75%">
+</p>
+
+<p align="center">
+    <img alt="Keyboard Builder" src="https://github.com/jbat100/sonosthesia-unity-demo-live/assets/1318918/2a1deb74-3b2c-40eb-9a37-371e0db165d9" width="75%">
 </p>
 
 ### Performance environment design
@@ -44,7 +59,7 @@ Building on the environment design tools knowledge acquired while working on [Mi
     <img alt="Keyboard Builder" src="https://github.com/jbat100/sonosthesia-unity-demo-instrument/assets/1318918/3e62e079-c46d-4778-802b-14ba055adcef" width="75%">
 </p>
 
-### Tools for creating immersive audio visual art
+### Tools for performance procedural graphics
 
 Pushing the limits of procedural graphics within the constraints imposed by the high FPS required for smooth XR experience, Sonosthesia nourishes itself from the top content providers such as [Catlike Coding](https://catlikecoding.com/unity/tutorials/), [Keijiro](https://github.com/keijiro?tab=repositories), [Gabriel Aguiar](https://www.youtube.com/@GabrielAguiarProd) expanding on their spark while allowing intricate real time parameter control using sound descriptors or other signals. Avenues currently being investigated include:
 
