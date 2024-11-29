@@ -5,14 +5,35 @@ This is the landing page for the Sonosthesia project. It gives a high level over
 ## Summary
 
 - A set of modular and reusable [Unity packages](https://github.com/jbat100/sonosthesia-unity-packages) covering a broad range of use cases related to audio visual interactive immersive art. These include data flow and processing, audio analysis, networking, MIDI/MPE, object interaction and manipulation, procedural shaders, meshes and VFX, and more. 
-- A set of Unity demo applications which showcase package usage, some in tandem with running Ableton Live sessions. These include [MIDI/MPE connectivity](https://github.com/jbat100/sonosthesia-unity-demo-midi), [audio reactive procedural graphics](https://github.com/jbat100/sonosthesia-unity-demo-deform) and [musical performance with bi-lateral Live/Unity communication](https://github.com/jbat100/sonosthesia-unity-demo-live).
+- A set of Unity demo applications which showcase package usage, some in tandem with running Ableton Live sessions. These include:
+  - [MIDI/MPE connectivity](https://github.com/jbat100/sonosthesia-unity-demo-midi)
+  - [Audio reactive procedural graphics](https://github.com/jbat100/sonosthesia-unity-demo-deform)
+  - [Musical performance with bi-lateral Live/Unity communication](https://github.com/jbat100/sonosthesia-unity-demo-live)
+  - [Reactive assets using FMOD](https://github.com/jbat100/sonosthesia-unity-reactive-assets) .
 - A [pipeline for extracting audio analysis](https://github.com/jbat100/sonosthesia-audio-pipeline) ahead of time for static audio assets, and playing them back in Unity. This allows performance gains which are particularly crucial in XR apps. 
 - A [node connector app](https://github.com/jbat100/sonosthesia-daw-connector) to ease bilateral communications with DAWs
 - Max 4 Live [devices](https://github.com/jbat100/sonosthesia-daw-connector/tree/main/m4l) aiming to provide detailed state information, sound descriptors and powerful remote control opportunities.
 
-## Ongoing Projects
+# Ongoing Projects
 
-### Real time audio reactivity
+## Reactive assets
+
+Unity demo project [here](https://github.com/jbat100/sonosthesia-unity-reactive-assets). Videos with reactive sound available [here](https://www.youtube.com/watch?v=cWXSkkcUVtA&list=PL8HqVGO27FJP4i2wh5F9h6oP8IscdKsg2) and [here](https://www.youtube.com/watch?v=Pw_EPlO7XNs&list=PL8HqVGO27FJP4i2wh5F9h6oP8IscdKsg2). This demo brings together multiple aspects of the project, namely:
+
+- Physics and and hand shape interaction using a custom affordance system
+- Continuous data flow and processing to control graphics and sound using interaction data
+- Advanced procedural graphics and sound techniques allowing performant real time control
+
+
+<p align="center">
+    <img alt="RtMIDIInput" src="https://github.com/user-attachments/assets/438dda8a-b4de-4131-9199-3ec0ecad2a4d" width="75%">
+</p>
+
+<p align="center">
+    <img alt="RtMIDIInput" src="https://github.com/user-attachments/assets/f6a21a40-8e9c-4807-abb2-b38d2de29527" width="75%">
+</p>
+
+## Real time audio reactivity
 
 Audio reactivity is a powerful mechanism which can bring life to a real time scene (XR or plain 3D), the core of the approach is to extract sound descriptors from sound in order to drive other aspects of the scene. These can be procedural graphics, shader or VFX parameters, procedural movement or physics, lighting or whatever the need might be. A number of different approaches are being investigated to ease this process:
 
@@ -23,7 +44,7 @@ Audio reactivity is a powerful mechanism which can bring life to a real time sce
 - (Planned) plugin into host system music playing apps and system sound to allow reactive visuals to be driven by user content. The feasability of on the fly source seperation (to isolate different instruments) will be investigated.
 
 
-### Briding the gap from Game Engines to DAWs
+## Briding the gap from Game Engines to DAWs
 
 While it's minimalist and old, MIDI is still the best option we have for controlling music software remotely. This option has been exploited by [Virtuoso-VR](https://virtuoso-vr.com/) and [MoveMusic](https://movemusic.com/) amongst others. Sonosthesia aims to expand the bridge, in particular exploiting the opportunities afforded by [Max 4 Live](https://www.ableton.com/en/live/max-for-live/) to allow more intricate bilateral interactions between XR controllers and music production software. This includes the DAWs broadcasting state which is not easly mapped to MIDI such as:
 
@@ -72,19 +93,19 @@ Pushing the limits of procedural graphics within the constraints imposed by the 
 A Unity [demo app](https://github.com/jbat100/sonosthesia-unity-demo-deform) demonstrates some of the techniques with results compiled in a YouTube [playlist](https://www.youtube.com/playlist?list=PL8HqVGO27FJP4i2wh5F9h6oP8IscdKsg2).
 
 <p align="center">
-  <img src="https://github.com/jbat100/sonosthesia-documentation/assets/1318918/34a5bd09-a028-4ff7-ac81-ba9cd99f952f" />
+  <img src="https://github.com/jbat100/sonosthesia-documentation/assets/1318918/34a5bd09-a028-4ff7-ac81-ba9cd99f952f" width="75%">
 </p>
 
 <p align="center">
-  <img src="https://github.com/jbat100/sonosthesia-documentation/assets/1318918/8df2eefa-ad37-49bd-b48c-a6cf816dc609" />
+  <img src="https://github.com/jbat100/sonosthesia-documentation/assets/1318918/8df2eefa-ad37-49bd-b48c-a6cf816dc609" width="75%">
 </p>
 
 <p align="center">
-  <img src="https://github.com/jbat100/sonosthesia-unity-demo-deform/assets/1318918/9b2b6682-0e67-40b4-96fa-c3d0d54e1dbf" />
+  <img src="https://github.com/jbat100/sonosthesia-unity-demo-deform/assets/1318918/9b2b6682-0e67-40b4-96fa-c3d0d54e1dbf" width="75%">
 </p>
 
 <p align="center">
-  <img src="https://github.com/jbat100/sonosthesia-unity-demo-deform/assets/1318918/66ef7806-3d56-47c0-ba0f-db4ba7997a73" />
+  <img src="https://github.com/jbat100/sonosthesia-unity-demo-deform/assets/1318918/66ef7806-3d56-47c0-ba0f-db4ba7997a73" width="75%">
 </p>
 
 ## Planned evolutions
